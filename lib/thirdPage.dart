@@ -15,11 +15,13 @@ class _New3State extends State<New3> {
       appBar: AppBar(
         title: Text("Third Screen"),
       ),
-      body: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text("Back")),
+      body: Center(
+        child: ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: Text("Back")),
+      ),
     ));
   }
 }

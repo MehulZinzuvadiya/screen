@@ -24,8 +24,7 @@ class _New2State extends State<New2> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (context) => New3()));
+                  Navigator.pushReplacementNamed(context, 'third');
                 },
                 child: Text("Next"),
               ),

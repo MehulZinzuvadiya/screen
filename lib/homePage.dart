@@ -21,8 +21,7 @@ class _New1State extends State<New1> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => New2()));
+            Navigator.pushNamed(context, 'second');
           },
           child: Text("Next"),
         ),
