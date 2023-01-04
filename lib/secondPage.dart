@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screen/homePage.dart';
+import 'package:screen/modelData.dart';
 import 'package:screen/thirdPage.dart';
 
 class New2 extends StatefulWidget {
@@ -10,8 +11,10 @@ class New2 extends StatefulWidget {
 }
 
 class _New2State extends State<New2> {
+
   @override
   Widget build(BuildContext context) {
+    ModelData m1=ModalRoute.of(context)!.settings.arguments as ModelData;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -22,6 +25,8 @@ class _New2State extends State<New2> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text("${m1.name}"),
+              SizedBox(height: 20,),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, 'third');
